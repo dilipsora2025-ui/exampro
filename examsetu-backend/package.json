@@ -1,20 +1,16 @@
 {
-  "name": "examsetu-doc-convert-backend",
+  "name": "examsetu-backend",
   "version": "1.0.0",
-  "description": "Converts legacy DOC/DOCX equations (WMF/OLE objects from old MS Equation Editor 3.0) and embedded images into web-friendly PNGs, so ExamSetu's document import can display them correctly.",
-  "main": "src/server.js",
-  "type": "commonjs",
+  "description": "ExamSetu shared backend - student accounts, published tests, submissions",
+  "main": "server.js",
   "scripts": {
-    "start": "node src/server.js",
-    "dev": "node --watch src/server.js"
+    "start": "node server.js"
   },
+  "engines": { "node": ">=18" },
   "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
     "express": "^4.19.2",
-    "multer": "^2.0.0",
-    "jszip": "^3.10.1",
-    "cors": "^2.8.5"
-  },
-  "engines": {
-    "node": ">=18"
+    "jsonwebtoken": "^9.0.2"
   }
 }
